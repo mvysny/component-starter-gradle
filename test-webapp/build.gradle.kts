@@ -7,6 +7,7 @@ plugins {
 gretty {
     contextPath = "/"
     servletContainer = "jetty9.4"
+    scanDir(File(rootDir, "my-component/src/main/resources")) // watch the my-component.js file for changes
 }
 
 dependencies {

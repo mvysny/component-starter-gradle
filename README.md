@@ -25,8 +25,15 @@ Clone this github repository and import the project to the IDE of your choice as
 
 1. Run Jetty: `./gradlew clean build test-webapp:appRun` from the command-line
 2. The test webapp will be running on [http://localhost:8080](http://localhost:8080).
+3. Press ENTER to stop Jetty gracefully; press CTRL+C to kill jetty.
 
-To develop the component on the fly:
+To develop the component on the fly with no IDE:
+
+1. Make changes to `my-component.js`
+2. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
+3. The browser should automatically reload the page. Sometimes you'll have to reload the page manually.
+
+To develop the component on the fly with IDE:
 
 1. Import the project into your IDE
 2. Make changes to `MyComponent.java` or `my-component.js`
