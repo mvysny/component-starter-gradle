@@ -8,5 +8,5 @@ node_modules
 webpack.generated.js
 target
 test-webapp/frontend/generated
+test-webapp-embedded/frontend/generated
 .npmrc
-

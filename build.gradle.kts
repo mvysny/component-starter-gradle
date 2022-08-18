@@ -33,6 +33,7 @@ subprojects {
     }
 
     dependencies {
+        implementation("org.jetbrains:annotations:22.0.0")
         // logging
         implementation("org.slf4j:slf4j-simple:${properties["slf4j_version"]}")
         // tests

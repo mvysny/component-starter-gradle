@@ -40,22 +40,26 @@ TODO
 
 ### Embedded
 
-TODO NOT IMPLEMENTED YET
-
 To run quickly from the command-line in development mode:
 
-1. Run `./mvnw -C clean install && cd test-webapp-embedded && mvn exec:java`
+1. Run `./gradlew test-webapp-embedded:run`
 2. The test webapp will be running on [http://localhost:8080](http://localhost:8080).
 
 To run the app from your IDE:
 
 1. Import the project into your IDE
-2. Run `mvn -C clean install` in the project, to configure Vaadin for npm mode.
+2. Run `./gradlew` in the project, to configure Vaadin for npm mode.
 3. Run/Debug the `Main` class as an application (run the `main()` method).
    The app will use npm to download all javascript libraries (will take a long time)
    and will start in development mode.
 4. Your app will be running on [http://localhost:8080](http://localhost:8080).
-   
+
+> **Info:** **Eclipse**+BuildShip may need a workaround in order for this project to work,
+> please see [this vaadin thread](https://vaadin.com/forum/thread/18241436) for more info.
+> This applies to **Visual Studio Code** as well since it also uses Eclipse bits and BuildShip
+> underneath - see [Bug #4](https://github.com/mvysny/vaadin14-embedded-jetty-gradle/issues/4)
+> for more details.
+
 See [Main.java](test-webapp-embedded/src/main/java/com/vaadin/starter/skeleton/Main.java)
 for details on how Jetty is configured for embedded mode.
 
@@ -68,7 +72,16 @@ Advantages of the embedded setup:
   * Alternatively follow the [Vaadin hotswap-agent](https://vaadin.com/docs/latest/configuration/live-reload/hotswap-agent)
     tutorial for even better hot reload.
 
-Disadvantages:
+To develop the component on the fly:
+
+1. Import the project into your IDE
+2. Run `./gradlew test-webapp-embedded:run`
+3. Make changes to `MyComponent.java` or `my-component.js`
+4. Compile changes (IDEA: CTRL+F9)
+5. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
+6. The browser should automatically reload the page.
+
+TODO Disadvantages:
 * Changes done in `my-component.js` are not picked, you will have to re-launch the app.
   * Neither hotswap-agent nor dcevm helps unfortunately
 
