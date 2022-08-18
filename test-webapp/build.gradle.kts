@@ -12,6 +12,7 @@ gretty {
 dependencies {
     // Vaadin
     implementation("com.vaadin:vaadin-core:${properties["vaadin_version"]}")
+    implementation(project(":my-component"))
     providedCompile("javax.servlet:javax.servlet-api:4.0.1")
 
     // logging
@@ -19,4 +20,3 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:${properties["slf4j_version"]}")
     implementation("org.slf4j:slf4j-api:${properties["slf4j_version"]}")
 }
-

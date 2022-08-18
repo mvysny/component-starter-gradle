@@ -1,2 +1,2 @@
-include("test-webapp")
+include("my-component", "test-webapp")
 
