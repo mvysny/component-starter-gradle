@@ -34,6 +34,10 @@ To develop the component on the fly:
 4. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
 5. The browser should automatically reload the page.
 
+Debugging:
+
+TODO
+
 ### Embedded
 
 TODO NOT IMPLEMENTED YET
