@@ -21,7 +21,13 @@ for more details.
 
 Clone this github repository and import the project to the IDE of your choice as a Gradle project. You need to have Java 11+ installed.
 
-### Jetty
+### WAR
+
+The `test-webapp` is a regular WAR project. You can use the [Gretty](https://plugins.gradle.org/plugin/org.gretty) plugin
+to run the project easily from command-line. If you have Intellij Ultimate, you can also run the project
+in any servlet container, for example Tomcat 9.
+
+Instructions to use Gretty+Jetty follow:
 
 1. Run Jetty: `./gradlew clean build test-webapp:appRun` from the command-line (alternatively run the `appRunWar` task, see below)
 2. The test webapp will be running on [http://localhost:8080](http://localhost:8080).
