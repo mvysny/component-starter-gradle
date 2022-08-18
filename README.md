@@ -23,9 +23,7 @@ Clone this github repository and import the project to the IDE of your choice as
 
 ### Jetty
 
-TODO
-
-1. Run Jetty: `./mvnw -C jetty:run` from the command-line
+1. Run Jetty: `./gradlew clean build test-webapp:appRun` from the command-line
 2. The test webapp will be running on [http://localhost:8080](http://localhost:8080).
 
 To develop the component on the fly:
@@ -33,10 +31,12 @@ To develop the component on the fly:
 1. Import the project into your IDE
 2. Make changes to `MyComponent.java` or `my-component.js`
 3. Compile changes (IDEA: CTRL+F9)
-4. Jetty should be able to pick up the changes after two seconds, restart the webapp
-5. Reload the page in the browser
+4. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
+5. The browser should automatically reload the page.
 
 ### Embedded
+
+TODO NOT IMPLEMENTED YET
 
 To run quickly from the command-line in development mode:
 
