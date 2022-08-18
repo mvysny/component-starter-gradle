@@ -23,7 +23,7 @@ Clone this github repository and import the project to the IDE of your choice as
 
 ### Jetty
 
-1. Run Jetty: `./gradlew clean build test-webapp:appRun` from the command-line
+1. Run Jetty: `./gradlew clean build test-webapp:appRun` from the command-line (alternatively run the `appRunWar` task, see below)
 2. The test webapp will be running on [http://localhost:8080](http://localhost:8080).
 3. Press ENTER to stop Jetty gracefully; press CTRL+C to kill jetty.
 
@@ -41,9 +41,20 @@ To develop the component on the fly with IDE:
 4. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
 5. The browser should automatically reload the page.
 
-Debugging:
+Java Debugging: TODO
 
-TODO
+#### Troubleshooting
+
+Q: The webpage is being reloaded constantly.
+
+A: It happens when you run `./gradlew clean build` in another terminal. Alternatively
+   you may have multiple gradle processes running. Kill them all via `./gradlew --stop` then try again.
+
+Q: Icons/images/SVGs are not loaded from `my-component/src/main/resources/META-INF/resources` (the resource jar stuff).
+
+A: Jetty only scans `WEB-INF/lib/*.jar` for resource jars. When using the `appRun` task, Jetty runs
+   in the exploded-war mode where the `my-component.jar` is not placed into `WEB-INF/lib/` as a jar file;
+   instead it's added as exploded onto classpath. Use `appRunWar` task instead of `appRun`.
 
 ### Embedded
 
