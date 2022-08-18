@@ -2,7 +2,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
     java
-    id("org.gretty") version "3.0.6" apply(false)
+    id("org.gretty") version "3.0.8" apply(false) // gretty 4.x only supports jetty11 and tomcat10, both of which only support the new jakarta.* servlet API.
     id("com.vaadin") version "23.1.6" apply(false)
 }
 
