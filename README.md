@@ -1,6 +1,6 @@
 # Vaadin Component Starter
 
-An archetype for your reusable component projects. Introduces three Maven modules:
+An archetype for your reusable component projects. Introduces three Gradle projects:
 * The actual component sources (both Java and JavaScript) placed in the [my-component](my-component) module;
   this module builds as a jar which you can publish to your Nexus and depend on in your projects.
 * A [test-webapp](test-webapp) is a webapp which runs the component itself, in order for you to
@@ -15,11 +15,15 @@ demoes packaging itself both into a flatten uberjar and a zip file containing
 a list of jars and a runner script. See "Packaging for production" below
 for more details.
 
+> Looking for Maven version? [vaadin-component-flow](https://github.com/mvysny/component-starter-flow)
+
 ## Developing
 
-Clone this github repository and import the project to the IDE of your choice as a Maven project. You need to have Java 11+ installed.
+Clone this github repository and import the project to the IDE of your choice as a Gradle project. You need to have Java 11+ installed.
 
 ### Jetty
+
+TODO
 
 1. Run Jetty: `./mvnw -C jetty:run` from the command-line
 2. The test webapp will be running on [http://localhost:8080](http://localhost:8080).
