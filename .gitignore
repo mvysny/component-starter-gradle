@@ -1,0 +1,12 @@
+.idea
+build
+.gradle
+*.iml
+classes
+out
+node_modules
+webpack.generated.js
+target
+test-webapp/frontend/generated
+.npmrc
+
