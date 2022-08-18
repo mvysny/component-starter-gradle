@@ -81,9 +81,18 @@ To develop the component on the fly:
 5. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
 6. The browser should automatically reload the page.
 
-TODO Disadvantages:
-* Changes done in `my-component.js` are not picked, you will have to re-launch the app.
-  * Neither hotswap-agent nor dcevm helps unfortunately
+To develop the component on the fly from your IDE (this way you can debug your Java code also):
+
+1. Import the project into your IDE
+2. Run `./gradlew` in the project, to configure Vaadin for npm mode.
+3. Run/Debug the `Main` class as an application (run the `main()` method).
+   The app will use npm to download all javascript libraries (will take a long time)
+   and will start in development mode.
+4. Your app will be running on [http://localhost:8080](http://localhost:8080).
+5. Make changes to `MyComponent.java` or `my-component.js`
+6. Compile changes (IDEA: CTRL+F9)
+7. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
+8. The browser should automatically reload the page.
 
 #### Missing `/src/main/webapp`?
 
