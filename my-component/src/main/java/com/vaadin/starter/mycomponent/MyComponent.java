@@ -5,6 +5,6 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 
 @Tag("my-component")
-@JsModule("./my-component/my-component.js")
+@JsModule("./my-component/my-component.ts")
 public class MyComponent extends Component {
 }

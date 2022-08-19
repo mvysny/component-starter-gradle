@@ -35,14 +35,14 @@ Instructions to use Gretty+Jetty follow:
 
 To develop the component on the fly with no IDE:
 
-1. Make changes to `my-component.js`
+1. Make changes to `my-component.ts`
 2. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
 3. The browser should automatically reload the page. Sometimes you'll have to reload the page manually.
 
 To develop the component on the fly with IDE:
 
 1. Import the project into your IDE
-2. Make changes to `MyComponent.java` or `my-component.js`
+2. Make changes to `MyComponent.java` or `my-component.ts`
 3. Compile changes (IDEA: CTRL+F9)
 4. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
 5. The browser should automatically reload the page.
@@ -100,7 +100,7 @@ To develop the component on the fly:
 
 1. Import the project into your IDE
 2. Run `./gradlew test-webapp-embedded:run`
-3. Make changes to `MyComponent.java` or `my-component.js`
+3. Make changes to `MyComponent.java` or `my-component.ts`
 4. Compile changes (IDEA: CTRL+F9)
 5. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
 6. The browser should automatically reload the page.
@@ -113,7 +113,7 @@ To develop the component on the fly from your IDE (this way you can debug your J
    The app will use npm to download all javascript libraries (will take a long time)
    and will start in development mode.
 4. Your app will be running on [http://localhost:8080](http://localhost:8080).
-5. Make changes to `MyComponent.java` or `my-component.js`
+5. Make changes to `MyComponent.java` or `my-component.ts`
 6. Compile changes (IDEA: CTRL+F9)
 7. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
 8. The browser should automatically reload the page.
