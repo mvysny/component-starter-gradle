@@ -47,7 +47,9 @@ To develop the component on the fly with IDE:
 4. Jetty should be able to pick up the changes after two seconds, spit out lots of errors and then restart the webapp.
 5. The browser should automatically reload the page.
 
-Java Debugging: TODO
+Java Debugging: not possible at the moment with the Gradle+Gretty. However, if you have
+Intellij Ultimate, you can download Tomcat and launch the `test-webapp` as a regular WAR app in Tomcat
+in Debug mode.
 
 #### Troubleshooting
 
